@@ -1,7 +1,5 @@
 typedef struct node {
     int info;
-    int balance_factor;
-    struct node *parent;
     struct node *left_child;
     struct node *right_child;
 } NODE;
@@ -11,7 +9,7 @@ typedef struct avl_tree {
 } AVL_TREE;
 
 AVL_TREE* create_avl_tree();
-NODE* create_node(int key, NODE* parent);
+NODE* create_node(int key);
 
 void insert_node(AVL_TREE *pl, int key);
 NODE* delete_node(AVL_TREE *pl, int key);
